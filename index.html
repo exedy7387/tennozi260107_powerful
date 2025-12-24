@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>パワフル音声再生</title>
+        <link rel="stylesheet" href="./static/style.css" />
+
+        <!-- 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" /> -->
+    </head>
+    <body>
+        <header class="header" id="header">
+            <div id="company-logo">
+                <img src="./static/image/logo1.png" alt="neibo_logo" />
+            </div>
+            <div id="current-time"></div>
+            <div id="mode-badge">パワフル</div>
+        </header>
+
+        <main id="mainContent">
+            <div class="control-grid">
+                <div class="grid-3cols">
+                    <button class="control-button play-button pos-intro" data-label="自己紹介" data-media-id="9944087b-2031-45bd-90ce-1814050e711d">
+                        <span class="title">自己紹介</span>
+                        <span class="subtitle">やっほー！ぼくの名前はネイボ！警察ヒーローロボットやで！...</span>
+                    </button>
+                    <button class="control-button play-button pos-q1" data-label="第一問" data-media-id="1aac5930-4157-4d5e-bb13-3de6a0a2d936">
+                        <span class="title">第一問</span><span class="subtitle">これは丸でっしゃろ！困ってるんや...</span>
+                    </button>
+                    <button class="control-button play-button pos-q2" data-label="第二問" data-media-id="f61f581e-feb7-4ce4-86b7-969ceb699128">
+                        <span class="title">第二問</span><span class="subtitle">これは丸でっせ！お巡りさん、事故です...</span>
+                    </button>
+
+                    <button class="control-button play-button pos-q3" data-label="第三問" data-media-id="08074079-3c5a-4d32-9e85-fe99fcbebf67">
+                        <span class="title">第三問</span><span class="subtitle">答えは丸やわ！警察官見たいし1回ぐらい...</span>
+                    </button>
+                    <button class="control-button play-button pos-q4" data-label="第四問" data-media-id="d6d2c4d7-7041-4da1-8ac4-285bc67c2beb">
+                        <span class="title">第四問</span><span class="subtitle">今度こそは丸でっせ！今まで全部バツや...</span>
+                    </button>
+                    <button class="control-button play-button pos-last" data-label="締めの言葉" data-media-id="0424bd99-1844-4ed0-b0ca-a6c3fb9476ab">
+                        <span class="title">締めの言葉</span><span class="subtitle">ごっつい勉強になりましたわー...</span>
+                    </button>
+                </div>
+
+                <div class="mode-row">
+                    <button class="control-button mode-button pos-sad" data-mode="sad_image" data-label="悲しい" data-media-id="eaa4414d-f173-41a9-8c3c-7914d3b40d5d">
+                        <span class="title">悲しい</span>
+                    </button>
+                    <button class="control-button mode-button pos-heart-eye" data-mode="heart_eye"><span class="title">目♥</span></button>
+                    <button class="control-button mode-button pos-heart-img" data-mode="heart_image" data-label="画像♥" data-media-id="4a01a6a9-a90d-4da8-9fb8-70ac19153acd">
+                        <span class="title">画像♥</span>
+                    </button>
+                    <button class="control-button mode-button pos-normal" data-mode="normal"><span class="title">通常</span></button>
+                </div>
+
+                <button class="stop-button pos-stop">再生停止</button>
+            </div>
+        </main>
+
+        <div id="mediaConfigPopup" class="popup-overlay" style="display: none">
+            <div class="popup-panel">
+                <h2>メディア設定</h2>
+                <div id="mediaConfigList" class="popup-list"></div>
+
+                <div class="popup-actions">
+                    <button id="mediaConfigCancel" class="popup-btn">キャンセル</button>
+                    <button id="mediaConfigSave" class="popup-btn primary">保存</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="./static/module/api.js"></script>
+        <script src="./static/module/function.js"></script>
+        <script src="./static/script.js"></script>
+    </body>
+</html>
